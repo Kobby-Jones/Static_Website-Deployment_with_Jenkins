@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Deploy to S3') {
             steps {
-                'aws s3 sync . s3://jenkins-static-website --delete'
+                bat 'aws s3 sync . s3://jenkins-static-website --delete'
             }
         }
     }
